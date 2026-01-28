@@ -1,4 +1,4 @@
-package App.Service;
+package Service;
 
 public class service {
 }
