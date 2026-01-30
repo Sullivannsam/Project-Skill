@@ -14,5 +14,4 @@ public class adminInfo {
     public String getPassword(){
         return this.adminTypePassword = "admin";
     }
-
 }

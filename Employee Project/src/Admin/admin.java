@@ -48,8 +48,5 @@ public class admin {
 
         scan.close();
     }
-    public void accessAdmin(){
-
-    }
 }
 

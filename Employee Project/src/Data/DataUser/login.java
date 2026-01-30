@@ -7,26 +7,6 @@ import java.util.Scanner;
 
 
 public class login {
-
-    public void getChoice() {
-        Scanner scan = new Scanner(System.in);
-        //Passing User input does not have an account
-        System.out.print("Do you have an Account?: ");
-        String input = scan.nextLine();
-        switch (input) {
-            case "Yes", "yes":
-                getLogin();
-                break;
-            case "No", "no":
-                register Register = new register();
-                Register.getRegister();
-                break;
-            default:
-                System.out.println("PLease try again");
-                break;
-        }
-    }
-
     public void getLogin() throws InterruptedException {
 
         Scanner scan = new Scanner(System.in);
