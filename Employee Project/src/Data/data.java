@@ -7,8 +7,13 @@ public class data {
     private int age;
     private int id;
 
+    //Employee Constructor
+    public data(String username, String userPassword){
+        this.name = "Sam";
+        this.password = "google";
 
-
+    }
+    //Default Constructor
     public data(){
 
     }
@@ -44,6 +49,11 @@ public class data {
     }
     public int getId(){
         return id;
+    }
+    //Getter Method User Login
+    public void getLogUsername(String username){
+    }
+    public void getLogPassword(String password){
     }
 
 
