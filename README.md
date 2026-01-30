@@ -18,8 +18,4 @@ I am gaining a lot of experienced by senior developer, do a lot of projects, kee
 ### Socials
 
 <p align="left"> <a href="https://www.github.com/Sullivannsam" target="_blank" rel="noreferrer"> <picture> <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" /> <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" /> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="32" height="32" alt="GitHub" title="GitHub" /> </picture> </a></p>
-### Badges
 
-<b>My GitHub Stats</b>
-
-<a href="http://www.github.com/Sullivannsam"><img src="https://github-readme-stats.vercel.app/api?username=Sullivannsam&show_icons=true&hide=&count_private=true&title_color=14b8a6&text_color=22c55e&icon_color=0891b2&bg_color=000000&hide_border=true&show_icons=true" alt="Sullivannsam's GitHub stats" /></a>
