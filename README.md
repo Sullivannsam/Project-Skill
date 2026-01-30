@@ -4,7 +4,7 @@ Hi 👋 My name is Sullivann Sam
 I'm a passion at Backend and Software Engineering!
 --------------------------------------------------
 
-I am gaining a lot of experienced by senior developer, do a lot of projects, keep improvement. however, i have a strong skills with Design Structure, implementation, testing, deployment, maintenance.
+I am gaining a lot of experienced by senior developer, i do a lot of projects, strong solving problem, also improvement. however, i have a strong skills with Design Structure, implementation, testing, deployment, maintenance.
 
 * 🌍  I'm based in Cambodia
 * ✉️  You can contact me at [sullivannsam71@gmail.com](mailto:sullivannsam71@gmail.com)
