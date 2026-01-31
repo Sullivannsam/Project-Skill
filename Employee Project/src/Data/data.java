@@ -7,10 +7,12 @@ public class data {
     private int age;
     private int id;
 
+    //Multi Constructor
     //Employee Constructor
-    public data(String username, String userPassword){
+    public data(String username, String userPassword, int userId){
         this.name = "Sam";
         this.password = "google";
+        this.id = 1000;
 
     }
     //Default Constructor
@@ -50,12 +52,27 @@ public class data {
     public int getId(){
         return id;
     }
-    //Getter Method User Login
-    public void getLogUsername(String username){
+
+    //Setter Method User Login
+    public void setLogUsername(String logUsername){
+        this.name = logUsername;
     }
-    public void getLogPassword(String password){
+    public void setLogPassword(String logUserPassword){
+        this.password = logUserPassword;
     }
 
+    //Getter Method User Login
+    public String getLogUsername(){
+        return this.name;
+    }
+    public String getLogPassword(){
+        return this.password;
+    }
+    //Display Employee an Account
+    public void showDetail(){
+        System.out.println("Your name is: " + name);
+        System.out.println("Your Id is: " + id);
+    }
 
 
 
