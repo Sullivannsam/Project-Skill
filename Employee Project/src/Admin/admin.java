@@ -20,7 +20,7 @@ public class admin {
             try { //Try With Admin login site
                 System.out.print("Enter Username: ");
                 String adminName = scan.nextLine();
-                System.out.println("Enter Password: ");
+                System.out.print("Enter Password: ");
                 String adminPassword = scan.nextLine();
                 if(adminName.isEmpty() && adminPassword.isEmpty())
                     System.out.println("Username or password is empty");

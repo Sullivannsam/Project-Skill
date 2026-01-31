@@ -24,22 +24,22 @@ public class Control {
                     case 1:
                         //Visit all information about employee
                         info infoView = new info();
-                        infoView.infoEmployee();
+                        infoView.addList();
                         break;
                     case 2:
                         //Add new Employee
                         info infoAdd = new info();
-                        infoAdd.infoEmployee();
+                        infoAdd.addList();
                         break;
                     case 3:
                         //Update salary Employee
                         info infoUpdate = new info();
-                        infoUpdate.infoEmployee();
+                        infoUpdate.addList();
                         break;
                     case 4:
                         //Remove Employee
                         info infoRemove = new info();
-                        infoRemove.infoEmployee();
+                        infoRemove.addList();
                         break;
                     case 5:
                         System.exit(0);
