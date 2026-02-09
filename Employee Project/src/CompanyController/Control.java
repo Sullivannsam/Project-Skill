@@ -24,7 +24,7 @@ public class Control {
                     case 1:
                         //Visit all information about employee
                         info infoView = new info();
-                        infoView.addList();
+                        infoView.viewList();
                         break;
                     case 2:
                         //Add new Employee
@@ -34,12 +34,12 @@ public class Control {
                     case 3:
                         //Update salary Employee
                         info infoUpdate = new info();
-                        infoUpdate.addList();
+                        infoUpdate.updateList();
                         break;
                     case 4:
                         //Remove Employee
                         info infoRemove = new info();
-                        infoRemove.addList();
+                        infoRemove.removeList();
                         break;
                     case 5:
                         System.exit(0);

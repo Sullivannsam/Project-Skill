@@ -77,7 +77,7 @@ public class Main{
 
                 //Handler Error, prevent user type int in string
             } catch (InputMismatchException e) {
-                System.out.println("Option can be in Number!");
+                System.out.println("Option can not  be in Number!");
                 scan.nextLine();
             }
         }while(input.isEmpty() || attempt >= 0 );

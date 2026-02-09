@@ -22,9 +22,13 @@ public class admin {
                 String adminName = scan.nextLine();
                 System.out.print("Enter Password: ");
                 String adminPassword = scan.nextLine();
-                if(adminName.isEmpty() && adminPassword.isEmpty())
+
+                //Ignore lower case or upper case and check if input are not empty
+                if(adminName.isEmpty() && adminPassword.isEmpty() || adminName.equalsIgnoreCase("admin"))
                     System.out.println("Username or password is empty");
                 //Check if username of admin and password are correct
+
+                //Check if Admin Correct
                 if (adminName.equals(logAdminInfo.getName()) && adminPassword.equals(logAdminInfo.getPassword())) {
                     System.out.println("Welcome to admin dashboard");
 //                    System.exit(0);
