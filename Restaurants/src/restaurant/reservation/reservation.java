@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class reservation {
+
     public void getReservation() throws InterruptedException{
 
         Scanner scan = new Scanner(System.in);
@@ -58,6 +59,8 @@ public class reservation {
         System.out.println("Done! ");
 
         System.out.println("Your Reservation Code is: " + generateRandom);
+        System.out.println(" ");
+        System.out.println("Please return this Reservation code to Cashier Service");
 
 
         return 0;

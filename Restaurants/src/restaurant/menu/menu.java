@@ -1,5 +1,7 @@
 package restaurant.menu;
 
+import restaurant.loginForm.login.login;
+import restaurant.loginForm.loginForm;
 import restaurant.reservation.reservation;
 
 import java.util.Scanner;
@@ -17,10 +19,14 @@ public class menu {
 
             //All Object Instance
             reservation showReservation  = new reservation();
+            loginForm getForm = new loginForm();
 
 
             switch(option){
                 case 1 -> showReservation.getReservation();
+                case 2 -> getForm.getFormLogin();
+                case 3 -> System.exit(0);
+                default -> System.out.println("Invalid Option! ");
             }
 
 
