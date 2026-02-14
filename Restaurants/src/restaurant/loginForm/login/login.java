@@ -34,6 +34,7 @@ public class login {
                 (!email.equals(dataLogin.logData()))) {
 
             attempt++;
+
             //Check if Correct login
             if (username.isEmpty() && password.isEmpty() && email.isEmpty())
                 System.out.println("Input must not empty! ");

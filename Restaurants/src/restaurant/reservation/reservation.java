@@ -42,13 +42,22 @@ public class reservation {
         else{
             System.out.println("Error Reservation Form");
         }
+
+
+        System.out.println(" ");
+        System.out.println("Your Check in" + checkIn +" is available");
+        System.out.println("Your Check out times is: " + checkOut);
+
         generateReservation();
 
         scan.close();
     }
 
     public int generateReservation() throws InterruptedException {
+
+        //Object Random Code
         Random random = new Random();
+
         int generateRandom = 100 + (random.nextInt(900));
 
         System.out.println("Please waiting your generate code Reservation! ");

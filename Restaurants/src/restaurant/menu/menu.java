@@ -1,6 +1,5 @@
 package restaurant.menu;
 
-import restaurant.loginForm.login.login;
 import restaurant.loginForm.loginForm;
 import restaurant.reservation.reservation;
 
