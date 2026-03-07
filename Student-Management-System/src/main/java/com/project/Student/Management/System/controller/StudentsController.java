@@ -1,9 +1,10 @@
 package com.project.Student.Management.System.controller;
 
 import com.project.Student.Management.System.model.Students;
-import com.project.Student.Management.System.repository.repository;
 import com.project.Student.Management.System.service.StudentsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,14 +15,22 @@ public class StudentsController {
     @Autowired
     private StudentsService service;
 
-    @GetMapping("/students")
-    public List<Students> getAllStudents(Students student){
+
+    @RequestMapping("/students")
+    public List<Students> getAllStudents(){
         return service.getStudent();
     }
 
-    @RequestMapping("/students/{id}")
-    public Students getStudentById(@PathVariable int id){
-        return service.getStudentById(id);
+    @GetMapping("/students/{id}")
+    public ResponseEntity <Students> getStudentById(@PathVariable int id){
+        Students student = service.getStudentById(id);
+
+        if(student != null){
+            return new ResponseEntity<>(student, HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @PostMapping("/students")
@@ -34,8 +43,8 @@ public class StudentsController {
         service.updateStudent(id);
     }
 
-    @DeleteMapping("student")
-    public void deleteStudent(@RequestBody Students id){
+    @DeleteMapping("/students/{id}")
+    public void  deleteStudent(@PathVariable Students id){
         service.deleteStudent(id);
     }
 

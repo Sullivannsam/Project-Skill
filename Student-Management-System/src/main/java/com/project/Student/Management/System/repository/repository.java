@@ -4,6 +4,8 @@ import com.project.Student.Management.System.model.Students;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 public interface repository extends JpaRepository <Students, Integer> {
