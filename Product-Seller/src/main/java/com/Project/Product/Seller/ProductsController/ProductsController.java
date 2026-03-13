@@ -35,10 +35,25 @@ public class ProductsController {
         }
     }
 
-    @PutMapping("api/products/update")
-    public ResponseEntity<Products> updateProducts(@RequestBody Products update){
+    @PostMapping("api/products")
+    public ResponseEntity<Products> addProducts(@RequestBody Products addProducts) {
 
-        Products product = service.getUpdateProducts(update);
+        Products product = service.getAddProducts(addProducts);
+
+        if (product != null) {
+
+            return new ResponseEntity<>(product, HttpStatus.OK);
+        }
+        else {
+
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("api/products/update")
+    public ResponseEntity<Products> updateProducts(@RequestBody Products updateProducts){
+
+        Products product = service.getUpdateProducts(updateProducts);
 
         if(product != null){
             return new ResponseEntity<>(product, HttpStatus.OK);

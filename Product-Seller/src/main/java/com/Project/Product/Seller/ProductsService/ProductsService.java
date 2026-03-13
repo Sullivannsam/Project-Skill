@@ -3,6 +3,7 @@ package com.Project.Product.Seller.ProductsService;
 
 import com.Project.Product.Seller.Model.Products;
 import com.Project.Product.Seller.Repository.RepositoryRecord;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @Service
 public class ProductsService {
 
+    @Autowired
     RepositoryRecord repository;
 
     public List<Products> getListAllProducts() {
@@ -25,11 +27,15 @@ public class ProductsService {
                         ));
     }
 
-    public Products getUpdateProducts(Products update) {
-        return repository.save(update);
+    public Products getAddProducts(Products addProducts){
+        return repository.save(addProducts);
+    }
+
+    public Products getUpdateProducts(Products updateProducts) {
+        return repository.save(updateProducts);
     }
 
     public void getDeleteProducts(int id) {
-        repository.delete(id);
+        repository.deleteById(id);
     }
 }
