@@ -18,7 +18,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class Config{
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
                 .authorizeHttpRequests(auth -> auth
@@ -26,15 +26,16 @@ public class Config{
                         .permitAll()
                         .requestMatchers("/api")
                         .permitAll()
-                        .requestMatchers("*/login")
+                        .requestMatchers("/login")
                         .permitAll()
                         .requestMatchers("/admin/***").hasRole("ADMIN")
                         .anyRequest()
                         .authenticated()
                 );
         http .formLogin(
-                request -> request.loginPage("api/login")
+                request -> request.loginPage("/login")
                         .permitAll()
+                        .successForwardUrl("/homepage")
         );
         http .logout(LogoutConfigurer::permitAll);
 
