@@ -1,4 +1,4 @@
-package com.Project.Product.Seller.ProductsService;
+package com.Project.Product.Seller.Service.ProductsService;
 
 
 import com.Project.Product.Seller.Model.Products;

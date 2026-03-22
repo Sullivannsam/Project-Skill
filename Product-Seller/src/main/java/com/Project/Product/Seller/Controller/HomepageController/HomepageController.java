@@ -1,4 +1,4 @@
-package com.Project.Product.Seller.HomepageController;
+package com.Project.Product.Seller.Controller.HomepageController;
 
 
 import org.springframework.stereotype.Component;

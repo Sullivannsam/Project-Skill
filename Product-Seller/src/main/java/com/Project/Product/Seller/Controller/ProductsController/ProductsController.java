@@ -1,8 +1,8 @@
-package com.Project.Product.Seller.ProductsController;
+package com.Project.Product.Seller.Controller.ProductsController;
 
 
 import com.Project.Product.Seller.Model.Products;
-import com.Project.Product.Seller.ProductsService.ProductsService;
+import com.Project.Product.Seller.Service.ProductsService.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

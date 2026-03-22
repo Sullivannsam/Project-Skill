@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,7 +18,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class Config{
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) {
 
         http
                 .authorizeHttpRequests(auth -> auth
@@ -25,15 +26,17 @@ public class Config{
                         .permitAll()
                         .requestMatchers("/api")
                         .permitAll()
+                        .requestMatchers("*/login")
+                        .permitAll()
                         .requestMatchers("/admin/***").hasRole("ADMIN")
                         .anyRequest()
                         .authenticated()
                 );
-
-//        http .formLogin(form -> form
-//                .loginPage("/api/login")
-//                .permitAll()
-//        );
+        http .formLogin(
+                request -> request.loginPage("api/login")
+                        .permitAll()
+        );
+        http .logout(LogoutConfigurer::permitAll);
 
         return http.build();
     }
