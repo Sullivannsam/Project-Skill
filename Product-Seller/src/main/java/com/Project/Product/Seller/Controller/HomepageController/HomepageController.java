@@ -2,6 +2,7 @@ package com.Project.Product.Seller.Controller.HomepageController;
 
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Component
 public class HomepageController {
 
-    @RequestMapping("api/homepage")
+    @GetMapping("/api/homepage")
     public String homePage(){
         return "<h1 align = center >Product Seller</h1>";
     }
