@@ -7,6 +7,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -25,13 +26,17 @@ public class config {
 
         http
                 .csrf(AbstractHttpConfigurer::disable);
+
         http
-                .authorizeHttpRequests(auth -> auth.
-                        requestMatchers("/homepage")
+                .authorizeHttpRequests((auth) -> auth
+
+                        .requestMatchers("/homepage")
                         .permitAll()
                         .requestMatchers("/api/v1/login")
                         .permitAll()
                         .requestMatchers("/api/v1/logout")
+                        .permitAll()
+                        .requestMatchers("/h2-console")
                         .permitAll()
                         .requestMatchers("/*/admin/*")
                         .hasRole("ADMIN")
@@ -40,12 +45,15 @@ public class config {
                 .formLogin(Customizer.withDefaults());
         http
                 .httpBasic(Customizer.withDefaults());
-
-
+        http
+                .logout((logout) -> logout
+                        .logoutSuccessUrl("You are logout!")
+                        .permitAll());
 
         return http.build();
     }
 
+    @Bean
     public PasswordEncoder passwordEncoder(){
 
         return new BCryptPasswordEncoder();
@@ -55,12 +63,12 @@ public class config {
     public UserDetailsManager userDetailsManager(){
         UserDetails user = User.builder()
                 .username("USER")
-                .password("User123")
+                .password(passwordEncoder().encode("user"))
                 .build();
 
         UserDetails admin = User.builder()
                 .username("ADMIN")
-                .password("Admin")
+                .password(passwordEncoder().encode("Admin"))
                 .build();
 
         return new InMemoryUserDetailsManager(user, admin);

@@ -4,6 +4,7 @@ package com.Brand.Company.Model.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
@@ -15,6 +16,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
+@Component
 @RestController
 public class product {
 
