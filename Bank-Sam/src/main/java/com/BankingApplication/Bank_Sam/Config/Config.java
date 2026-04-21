@@ -36,6 +36,8 @@ public class Config {
                         .hasRole("ADMIN")
                         .requestMatchers("/*/photo/**")
                         .hasRole("ADMIN")
+                        .requestMatchers("/*/auth/**")
+                        .hasRole("ADMIN")
                         .requestMatchers("/*/admin/**")
                         .hasRole("ADMIN")
                         .requestMatchers("/*/admindashboard/**")
