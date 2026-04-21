@@ -1,11 +1,9 @@
 package com.BankManagementSystemAPI.Banking.Controller;
 
 
-import com.BankManagementSystemAPI.Banking.Model.Register;
 import com.BankManagementSystemAPI.Banking.Model.User;
 import com.BankManagementSystemAPI.Banking.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

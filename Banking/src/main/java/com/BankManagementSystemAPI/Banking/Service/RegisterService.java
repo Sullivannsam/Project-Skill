@@ -3,11 +3,11 @@ package com.BankManagementSystemAPI.Banking.Service;
 import com.BankManagementSystemAPI.Banking.Model.Register;
 import com.BankManagementSystemAPI.Banking.Repository.RepositoryRegister;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RestController
+@Service
 public class RegisterService {
 
     @Autowired
