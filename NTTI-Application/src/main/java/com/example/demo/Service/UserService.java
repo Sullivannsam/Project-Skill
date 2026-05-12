@@ -17,6 +17,18 @@ public class UserService {
         return usersRepository.findAll();
     }
 
+    public Users addUsers(Users id){
+        return usersRepository.save(id);
+    }
+
+    public Users updateUsers(Users update){
+        return usersRepository.save(update);
+    }
+
+    public void  deleteUser(Users delete){
+        usersRepository.delete(delete);
+    }
+
 
 
 
